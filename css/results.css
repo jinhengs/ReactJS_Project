@@ -1,0 +1,142 @@
+.result__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event__grid {
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 9px;
+}
+
+.event__price {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.5px dashed white;
+    border-radius: 5px;
+    padding: 3px;
+    color: #fff;
+    font-size:20px;
+}
+
+.result__grid {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    cursor:pointer;
+}
+
+
+
+
+/* For compare-toggle button on top left corner of each event tiles */
+
+.compare__button {
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    width: 0;
+    height: 30px;
+    border-left: 20px solid rgba(255,140,0, 0.8);
+    border-right: 20px solid rgba(255,140,0, 0.8);
+    border-bottom: 12px solid transparent;
+    transition: height 0.2s ease-in;
+    cursor: pointer;
+}
+
+.compare__button:hover {
+    height: 35px;
+}
+
+.compare__button:hover + .bubble {
+    display: inline;
+}
+
+.bubble {
+    display: none;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: .4em;
+    padding: 0px 5px 0px 5px;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: .35em solid transparent;
+    border-right-color: #fff;
+    border-left: 0;
+    margin-top: -0.35em;
+    margin-left: -0.35em;
+}
+
+
+/* For event description in each event card */
+.result__desc {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.event__title {
+    font-size: 1.17em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.event__desc {
+    padding-left: 2vw;
+    color: #fff;
+}
+
+
+
+
+/* Button for going to compare view */
+.selectBtn {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+
+}
+
+
+
+/* Media queries for organizing event tiles */
+@media only screen and (max-width: 749px) {
+    .event__grid {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .event__grid {
+        width: 46%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .event__grid {
+        width: 31%;
+    }
+}
+

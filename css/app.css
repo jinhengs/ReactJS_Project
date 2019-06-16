@@ -1,0 +1,322 @@
+html {
+    background-image: url("../resource/admitonebg.jpg");
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+
+}
+
+* {
+    border-sizing: border-box;
+}
+
+.bold, .regular, body, div, table, h1, h2, h3, h4, h5, h6, li, p, textarea {
+    font-family:'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+}
+
+.wrapper {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+/*    border: 2px solid orange;*/
+}
+
+.header {
+    z-index: 100;
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding 0;
+    height:4.5em;
+    /*    background: rgba(255, 255, 255, 0.9);*/
+}
+
+.nav {
+    margin-top:15px !important;
+}
+
+.logoCol {
+    margin: 0 !important;
+}
+
+.header_logo {
+    padding: 10px;
+    margin: 0;
+    height: 3em;
+    width: auto;
+}
+
+.content {
+    z-index: 0;
+    /*position: relative;*/
+    /*width: 95%;*/
+    /*padding-bottom: 5px;*/
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-radius: 20px;
+    height: calc(100% - 7em);
+    width: calc(100% - 2em) !important;
+    margin:auto;
+}
+
+.footer {
+    z-index: -100;
+    width: 100%;
+    position: fixed !important;
+    margin: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+    height: 1.5em;
+    background: rgba(255, 255, 255, 0.1);
+    overflow:hidden
+    
+/*    border: 2px solid yellow;*/
+}
+
+.footer h6 {
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* All Views*/
+
+.view {
+    position: relative;
+    height:100%;
+    /*overflow: scroll;*/
+}
+
+.viewTitle {
+    position: relative;
+    /*height:3.5em;*/
+    max-height:70px;
+    overflow:hidden;
+}
+
+.viewTitle h3 {
+    margin: 0;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+.viewContent {
+    overflow-y: auto;
+    height: calc(100% - 5em);
+    /*height: calc(100% - 8em);*/
+    width: calc(100% - 2em) !important;
+    margin:auto;
+}
+
+
+.mainButton {
+    background: #FF8C00;
+    cursor: pointer;
+    padding: 10px;
+    text-transform: uppercase;
+    outline:none;
+    border-radius:20px;
+    border: 0;
+    color: #fff;
+    font-weight:700;
+    
+    -webkit-transition: 0.05s ease-in-out;
+    -moz-transition: 0.05 ease-in-out;
+    -o-transition: 0.05s ease-in-out;
+    transition: 0.05s ease-in-out;
+
+-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.mainButton:hover {
+    background: #D2691E;
+    padding-top: 11px;
+    padding-bottom: 9px;
+}
+
+.mainButton:focus {
+    outline:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.artistLinks .mainButton :hover {
+    padding:10px;
+}
+
+.mainButton:active {
+/*    box-shadow: 0 1px #ae6000;*/
+
+/*    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);*/
+}
+
+.viewTitle .mainButton {
+    margin-top: 0px;
+}
+
+.backBtn {
+    float:right;
+}
+
+.navBtn {
+    float:right;
+    margin-left:5px;
+
+-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.navBtn:focus {
+    outline:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Media querries for header font size. */
+@media only screen and (min-width: 640px) {
+    #searchTitle {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 514px) {
+    .viewTitle h3, #searchTitle {
+        font-size: 4.5vw;
+    }
+}
+
+
+.error {
+    text-align:center;
+    margin:50px;
+    font-family:'Montserrat', sans-serif;
+}
+.collapsible-menu {
+    background-color: rgba(0,0,0,0);/*#FF8c00;*/
+    /*padding: 0px 30px;*/
+    /*box-shadow: 1px 2px 3px rgba(0,0,0,0.2);*/
+    position:fixed;
+    right:10;
+    margin:0px 15px 0px 0px !important;
+    user-select:none;
+}
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin:0px
+}
+
+.collapsible-menu button {
+    width:100px;
+    background: #FF8C00;
+    cursor: pointer;
+    padding: 10px;
+    text-transform: uppercase;
+    outline:none;
+    /*border-radius:20px;*/
+    border: 0;
+    color: #fff;
+    font-weight:700;
+    
+    -webkit-transition: 0.05s ease-in-out;
+    -moz-transition: 0.05 ease-in-out;
+    -o-transition: 0.05s ease-in-out;
+    transition: 0.05s ease-in-out;
+}
+
+.collapsible-menu button:hover {
+    background: #D2691E;
+}
+
+.collapsible-menu label {
+    display:block;
+    cursor: pointer;
+    background: url(../resource/menu.png) no-repeat right center;
+    background-size: 40px 40px;
+    padding: 0px 10px 0px 0px;
+    width:40px;
+    height:40px;
+    outline:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.menu-content {
+    /*max-height:0;*/
+    position:fixed;
+    right:25px;
+    overflow:hidden;
+    /*font-family: 'Oswald', sans-serif; */
+    /*padding: 0 0 0 50px;*/
+    text-transform:uppercase;
+    border-radius:20px;
+    border:0;
+    margin-top:-40px;
+    margin-right:45px;
+    -webkit-transform: translate(0px, -200px);
+    transform: translate(0px, -200px);
+    transition: transform 0.3s ease;
+    user-select:none;
+}
+
+.menu-content button {
+    margin:0 !important;
+}
+
+input#menu {
+    display:none;
+}
+
+input:checked ~ label {
+    background-image: url(../resource/close.png);
+}
+
+input:checked ~ .menu-content {
+    max-height:100%;
+    background-color:rgba(0,0,0, 0.6);
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+
+input:checked ~ .collapsible-menu {
+    background-color:rgba(0,0,0.6);
+}
+
